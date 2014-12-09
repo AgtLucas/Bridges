@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/AgtLucas/Bridges/issues"
   },
-  "homepage": "https://github.com/AgtLucas/Bridges"
+  "homepage": "https://github.com/AgtLucas/Bridges",
+  "dependencies": {
+    "co-body": "^1.0.0",
+    "co-monk": "^1.0.0",
+    "co-views": "^0.2.0",
+    "koa": "^0.13.0",
+    "koa-logger": "^1.2.2",
+    "koa-route": "^2.4.0",
+    "koa-static": "^1.4.7",
+    "monk": "^0.9.1",
+    "swig": "^1.4.2"
+  }
 }
