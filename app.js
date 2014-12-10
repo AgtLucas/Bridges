@@ -10,7 +10,7 @@ var serve = require('koa-static');
 var app = koa();
 
 app.use(logger());
-app.user(serve('./public'));
+app.use(serve('./public'));
 
 app.use(route.get('/', routes.list));
 app.use(route.get('/todo/new', routes.add));
