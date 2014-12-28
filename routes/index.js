@@ -3,6 +3,7 @@
 var parse = require('co-body');
 var render = require('../lib/views');
 var todos = require('../models/todos');
+var users = require('../models/users');
 
 // List items
 exports.list = function *() {
@@ -47,8 +48,9 @@ exports.create = function *() {
   console.log('Yo ' + input);
   var d = new Date();
   yield todos.insert({
-    name: input.name,
-    description: input.description,
+    user: input.todo_username,
+    name: input.todo_name,
+    description: input.todo_description,
     create_on: d,
     updated_on: d
   });
@@ -60,8 +62,9 @@ exports.update = function *() {
   var input = yield parse(this);
   console.log(input);
   yield todos.updateById(input.id, {
-    name: input.name,
-    description: input.description,
+    user: input.todo_username,
+    name: input.todo_name,
+    description: input.todo_description,
     create_on: new Date(input.create_on),
     updated_on: new Date()
   });
