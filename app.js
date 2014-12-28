@@ -1,11 +1,11 @@
 'use strict';
 
-var http = require('http');
-var koa = require('koa');
-var logger = require('koa-logger');
-var route = require('koa-route');
-var routes = require('./routes');
-var serve = require('koa-static');
+var http = require('http')
+  , koa = require('koa')
+  , logger = require('koa-logger')
+  , route = require('koa-route')
+  , routes = require('./routes')
+  , serve = require('koa-static');
 
 var app = koa();
 
